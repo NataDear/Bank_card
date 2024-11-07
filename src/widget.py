@@ -1,6 +1,8 @@
 from typing import Union
 from src.masks import get_mask_card_number, get_mask_account
+
 number_account_card: str # номер вводимого счета или карты
+user_data: str # дата и время пользователя
 
 def mask_account_card(number_account_card: Union[str]) -> str:
     """ Функция, которая маскирует номер счета или карты"""
@@ -23,12 +25,12 @@ def get_date(user_data: Union[str]) -> str:
     """Функция, которая изменяет формат даты"""
     data_day = user_data.split("Т")[0]
 
-    return f"{(data_day.split('-')[-1])}.{(data_day.split('-')[-2])}.{(data_day.split('-')[-3])}"
+    return f"{(user_data[8:10])}.{(data_day.split('-')[-2])}.{(data_day.split('-')[-3])}"
 
 
 
 
 print(mask_account_card("Visa Platinum 8990922113665229"))
-
+print(get_date("2024-03-11T02:26:18.671407"))
 
 
