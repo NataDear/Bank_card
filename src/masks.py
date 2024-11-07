@@ -16,6 +16,6 @@ def get_mask_account(account_numbers: Union[str]) -> str:
     return f"**{account_numbers[-4:]}"
 
 
-print(get_mask_account("73654108430135874305"))
+# print(get_mask_account("73654108430135874305"))
 
-print(get_mask_card_number("7000792289606361"))
+# print(get_mask_card_number("7000792289606361"))

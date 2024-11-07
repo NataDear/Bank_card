@@ -18,3 +18,4 @@ def mask_account_card(number_account_card: Union[str]) -> str:
         return f"{text_result} {get_mask_card_number(digit_result)}"
 
 
+print(mask_account_card("MasterCard 7158300734726758"))
