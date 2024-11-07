@@ -19,4 +19,16 @@ def mask_account_card(number_account_card: Union[str]) -> str:
         return f"{text_result} {get_mask_card_number(digit_result)}"
 
 
+def get_date(user_data: Union[str]) -> str:
+    """Функция, которая изменяет формат даты"""
+    data_day = user_data.split("Т")[0]
+
+    return f"{(data_day.split('-')[-1])}.{(data_day.split('-')[-2])}.{(data_day.split('-')[-3])}"
+
+
+
+
 print(mask_account_card("Visa Platinum 8990922113665229"))
+
+
+
