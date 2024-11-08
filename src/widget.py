@@ -2,9 +2,6 @@ from typing import Union
 
 from src.masks import get_mask_account, get_mask_card_number
 
-# number_account_card: str   # номер вводимого счета или карты
-# user_data: str  # дата и время пользователя
-
 
 def mask_account_card(number_account_card: Union[str]) -> str:
     """ Функция, которая маскирует номер счета или карты"""
